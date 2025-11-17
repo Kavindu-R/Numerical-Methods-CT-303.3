@@ -27,7 +27,7 @@ numerical_methods_project/
 │   └── secant.py              # Secant method
 │
 ├── test_functions/            # Test equations
-│   └── equations.py           # 7 test equations with known roots
+│   └── equations.py           # 3 test equations with known roots
 │
 ├── analysis/                  # Analysis and visualization
 │   └── visualizations.py      # Plotting functions
@@ -47,14 +47,6 @@ numerical_methods_project/
 ### 1. Setup Environment
 
 ```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -96,15 +88,11 @@ python methods/secant.py
 
 The project includes 7 carefully selected test equations:
 
-| ID | Equation | Type | Known Root |
-|----|----------|------|------------|
-| eq1 | x² - 4 = 0 | Polynomial | 2.0 |
-| eq2 | x³ - x - 2 = 0 | Cubic | 1.5213797... |
-| eq3 | cos(x) - x = 0 | Transcendental | 0.7390851... |
-| eq4 | e^x - 3x = 0 | Exponential | 1.5121345... |
-| eq5 | x³ - 2x - 5 = 0 | Cubic | 2.0945514... |
-| eq6 | x·sin(x) - 1 = 0 | Trig Product | 1.1141571... |
-| eq7 | x² - e^(-x) = 0 | Mixed | 0.7034674... |
+| ID | Equation |
+|----|----------|
+| eq1 |f(x) = x³ - 6x² + 11x - 6|
+| eq2 |f(x) = cos(x) - x
+| eq3 |f(x) = e^x - 3x²
 
 ## 📈 Key Features
 
@@ -205,7 +193,7 @@ PLOTS_DIR = "results/plots"
 ## 📊 Expected Results
 
 ### Convergence Speed (Typical)
-- **Bisection:** 15-25 iterations
+- **Bisection:** 5-10 iterations
 - **Newton-Raphson:** 3-6 iterations
 - **Secant:** 5-8 iterations
 
@@ -240,13 +228,40 @@ import matplotlib.pyplot as plt
 
 ## 👥 Contributors
 
+<table style="width:100%">
+  <tr>
+    <th>Student ID</th>
+    <th>Name</th>
+    <th>GitHub Username</th>
+  </tr>
+  <tr>
+    <td>27292</td>
+    <td>GUI Perera </td>
+    <td><a href="https://github.com/upekshaip">@upekshaip</a></td>
+  </tr>
+  <tr>
+    <td>27601</td>
+    <td>SWKR Pinsiri</td>
+    <td><a href="https://github.com/Kavindu-R">@Kavindu-R</a></td>
+  </tr>
+   <tr>
+    <td>27958</td>
+    <td>MCA Jayasingha</td>
+    <td><a href="https://github.com/ChethakaJayasingha">@ChethakaJayasingha</a></td>
+  </tr>
+  <tr>
+    <td>27578</td>
+    <td>MJM Shaahid</td>
+    <td><a href="https://github.com/Shaahidzx">@Shaahidzx</a></td>
+  </tr>
+  <tr>
+    <td>27654</td>
+    <td>GHM Bandara</td>
+    <td><a href="https://github.com/Mavidu12">@Mavidu12</a></td>
+  </tr>
+   
+</table>
 
-
-## 📖 References
-
-1. Burden, R. L., & Faires, J. D. (2010). *Numerical Analysis* (9th ed.)
-2. Chapra, S. C., & Canale, R. P. (2015). *Numerical Methods for Engineers*
-3. Heath, M. T. (2018). *Scientific Computing: An Introductory Survey*
 
 
 ## ⚖️ License
