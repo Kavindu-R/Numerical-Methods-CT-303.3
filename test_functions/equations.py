@@ -105,7 +105,7 @@ def get_test_equations() -> Dict[str, TestEquation]:
     )
     
    # Equation 3
-   # f(x) = e^x - 3x²
+    # f(x) = e^x - 3x²
     equations['eq3'] = TestEquation(
         name="Equation 3 - f(x) = e^x - 3x²",
         f=lambda x: np.exp(x) - 3*(x**2),
