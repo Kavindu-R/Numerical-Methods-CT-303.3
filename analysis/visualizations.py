@@ -374,7 +374,7 @@ if __name__ == "__main__":
     equations = get_test_equations()
     
     # Generate plots for first equation as example
-    eq = equations['eq3']  # cos(x) - x
+    eq = equations['eq1, eq2, eq3']  
     
     print("Generating example plots...")
     plot_convergence_history(eq)
