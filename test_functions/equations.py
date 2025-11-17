@@ -78,43 +78,43 @@ def get_test_equations() -> Dict[str, TestEquation]:
     
     equations = {}
     
-    # Equation 1: Simple Quadratic
-    # f(x) = x² - 4 = 0
+    # Equation 1
+    # f(x) = x³ - 6x² + 11x - 6
     equations['eq1'] = TestEquation(
-        name="Simple Quadratic",
-        f=lambda x: x**2 - 4,
-        df=lambda x: 2*x,
-        known_roots=[2.0, -2.0],
-        bisection_interval=(0, 3),
-        newton_guess=1.0,
+        name="Equation 1 - f(x) = x³ - 6x² + 11x - 6",
+        f=lambda x: x**3 - 6*x**2 + 11*x - 6,
+        df=lambda x: 3*x**2 - 12*x + 11,
+        known_roots=[1.0, 2.0, 3.0],
+        bisection_interval=(0.5, 3.5),
+        newton_guess=2.5,
         secant_guesses=(1.0, 3.0),
-        description="f(x) = x² - 4"
+        description="f(x) = x³ - 6x² + 11x - 6"
     )
     
-    # Equation 2: Cubic Polynomial
-    # f(x) = x³ - x - 2 = 0
+    # Equation 2
+    # f(x) = cos(x) - x
     equations['eq2'] = TestEquation(
-        name="Cubic Polynomial",
-        f=lambda x: x**3 - x - 2,
-        df=lambda x: 3*x**2 - 1,
-        known_roots=[1.5213797068045],
-        bisection_interval=(1, 2),
-        newton_guess=1.5,
-        secant_guesses=(1.0, 2.0),
-        description="f(x) = x³ - x - 2"
-    )
-    
-    # Equation 3: Transcendental (Trigonometric)
-    # f(x) = cos(x) - x = 0
-    equations['eq3'] = TestEquation(
-        name="Transcendental (cos)",
+        name="Equation 2 - f(x) = cos(x) - x",
         f=lambda x: np.cos(x) - x,
         df=lambda x: -np.sin(x) - 1,
-        known_roots=[0.7390851332151607],
+        known_roots=[0.739],
         bisection_interval=(0, 1),
         newton_guess=0.5,
         secant_guesses=(0.0, 1.0),
         description="f(x) = cos(x) - x"
+    )
+    
+   # Equation 3
+   # f(x) = e^x - 3x²
+    equations['eq3'] = TestEquation(
+        name="Equation 3 - f(x) = e^x - 3x²",
+        f=lambda x: np.exp(x) - 3*(x**2),
+        df=lambda x: np.exp(x) - 6*x,
+        known_roots=[0.620],
+        bisection_interval=(0, 1),
+        newton_guess=0.6,
+        secant_guesses=(0.4, 0.8),
+        description="f(x) = e^x - 3x²"
     )
     
     
