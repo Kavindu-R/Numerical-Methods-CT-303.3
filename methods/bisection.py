@@ -243,36 +243,3 @@ def bisection_verbose(
     }
 
 
-# Example usage and testing
-if __name__ == "__main__":
-    print("Testing Bisection Method Implementation")
-    print("=" * 70)
-    
-    # Test Case 1: Simple quadratic
-    print("\nTest 1: f(x) = x² - 4, Root: x = 2")
-    def f1(x):
-        return x**2 - 4
-    
-    result1 = bisection_verbose(f1, 0, 3, tol=1e-6)
-    
-    # Test Case 2: Cubic equation
-    print("\nTest 2: f(x) = x³ - x - 2, Root: x ≈ 1.52138")
-    def f2(x):
-        return x**3 - x - 2
-    
-    result2 = bisection_verbose(f2, 1, 2, tol=1e-6)
-    
-    # Test Case 3: Transcendental equation
-    print("\nTest 3: f(x) = cos(x) - x, Root: x ≈ 0.73909")
-    def f3(x):
-        return np.cos(x) - x
-    
-    result3 = bisection_verbose(f3, 0, 1, tol=1e-6)
-    
-    print("\n" + "="*70)
-    print("SUMMARY OF ALL TESTS")
-    print("="*70)
-    print(f"Test 1: Root = {result1['root']:.10f}, Iterations = {result1['iterations']}")
-    print(f"Test 2: Root = {result2['root']:.10f}, Iterations = {result2['iterations']}")
-    print(f"Test 3: Root = {result3['root']:.10f}, Iterations = {result3['iterations']}")
-    print("="*70)

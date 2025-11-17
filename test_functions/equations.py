@@ -117,57 +117,6 @@ def get_test_equations() -> Dict[str, TestEquation]:
         description="f(x) = cos(x) - x"
     )
     
-    # Equation 4: Exponential Equation
-    # f(x) = e^x - 3x = 0
-    equations['eq4'] = TestEquation(
-        name="Exponential Equation",
-        f=lambda x: np.exp(x) - 3*x,
-        df=lambda x: np.exp(x) - 3,
-        known_roots=[0.619061286736, 1.512134551657],
-        bisection_interval=(1.3, 2.0),
-        newton_guess=1.5,
-        secant_guesses=(1.0, 2.0),
-        description="f(x) = e^x - 3x"
-    )
-    
-    # Equation 5: Another Cubic
-    # f(x) = x³ - 2x - 5 = 0
-    equations['eq5'] = TestEquation(
-        name="Cubic Polynomial 2",
-        f=lambda x: x**3 - 2*x - 5,
-        df=lambda x: 3*x**2 - 2,
-        known_roots=[2.0945514815423265],
-        bisection_interval=(2, 3),
-        newton_guess=2.0,
-        secant_guesses=(2.0, 3.0),
-        description="f(x) = x³ - 2x - 5"
-    )
-    
-    # Equation 6: Trigonometric with Product
-    # f(x) = x·sin(x) - 1 = 0
-    equations['eq6'] = TestEquation(
-        name="Trig with Product",
-        f=lambda x: x * np.sin(x) - 1,
-        df=lambda x: np.sin(x) + x * np.cos(x),
-        known_roots=[1.1141571408719301],
-        bisection_interval=(0.5, 2),
-        newton_guess=1.0,
-        secant_guesses=(0.5, 2.0),
-        description="f(x) = x·sin(x) - 1"
-    )
-    
-    # Equation 7: Exponential-Polynomial
-    # f(x) = x² - e^(-x) = 0
-    equations['eq7'] = TestEquation(
-        name="Exponential-Polynomial",
-        f=lambda x: x**2 - np.exp(-x),
-        df=lambda x: 2*x + np.exp(-x),
-        known_roots=[0.7034674224983917],
-        bisection_interval=(0.5, 1),
-        newton_guess=0.7,
-        secant_guesses=(0.5, 1.0),
-        description="f(x) = x² - e^(-x)"
-    )
     
     return equations
 
