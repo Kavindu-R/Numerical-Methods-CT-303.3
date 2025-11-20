@@ -38,7 +38,8 @@ numerical_methods_project/
 │   └── logs/                 # Execution logs
 │
 ├── config.py                  # Configuration settings
-├── main.py                    # Main execution script
+├── main.py                    # Main execution for only tables 
+├── complete.py                # Run all execution (tables, charts, logs...)
 └── requirements.txt           # Python dependencies
 ```
 
@@ -55,7 +56,7 @@ pip install -r requirements.txt
 ### 2. Run Main Analysis
 
 ```bash
-python main.py
+python complete.py
 ```
 
 This will:
