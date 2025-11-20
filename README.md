@@ -87,7 +87,7 @@ python methods/secant.py
 
 ## 📊 Test Equations
 
-The project includes 7 carefully selected test equations:
+The project includes 3 test equations:
 
 | ID | Equation |
 |----|----------|
